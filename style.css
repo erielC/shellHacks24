@@ -1,0 +1,13 @@
+body {
+  background-color: hsl(0, 0%, 20%);
+}
+
+h1 {
+  font-family: 'Pokeadot', sans-serif;
+  font-size: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
