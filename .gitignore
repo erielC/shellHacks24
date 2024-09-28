@@ -1,4 +1,4 @@
 # Ignore environment variable files
 
-keys.env
 # 
+keys/key.env
