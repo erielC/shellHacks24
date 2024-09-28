@@ -9,13 +9,13 @@ html{
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12pt;
     text-align: center;
-    background-color: #001047;
+    overflow-y:scroll;
 }
 
 
 hr{
     position:relative;
-    transform: translate(0,190px);
+    transform: translate(0,250px);
     width:400px ;
     margin: 20px 0px 20px 445px ; /*adds space between the line and rest of the code*/
     border: none;
@@ -27,15 +27,92 @@ hr{
 body{
     min-height: 100vh;
     background-color: cover;
+    background-image: url("fiu-library1.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
     overflow: hidden;
+    background-position: 1%;
+    padding-bottom: 3%;
+}
+
+form{
+    margin-top: 10px;
+    width:min(600px,100%);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+form>div{
+    width:100%;
+    display: flex;
+    justify-content:center;
+}
+/*for the boxes the left*/
+form label{ 
+    flex-shrink:0;
+    height: 50px;
+    width:50px;
+    background-color:#001047;
+    fill: lightgray;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.5rem;
+    font-weight:500;
 
 }
 
+form input{
+    box-sizing:border-box;
+    flex-grow: 1;
+    min-width:0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid #001047;
+    border-left:none;
+    background-color:#f7f7f7;
+    transition: 150ms ease;
+    
+}
+form input:hover,textarea:hover{
+    border-color: rgb(36, 67, 180);;
+}
+
+form input:focus{
+    outline:none;
+    border-color:#001047;
+}
+form input::placeholder{
+    color:#001047;
+    opacity: 1;
+}
+textarea{
+    max-width:100%;
+    line-height:1.5;
+    border: 2px solid #001047;
+    transition: 150ms ease;
+    resize: none;
+    background-color:#f7f7f7;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    padding: 1%;
+    justify-content: left;
+    text-align: left;
+    display:flex;
+    flex-direction: left;
+
+}
 .sub{   
     background-color: white;
     border-radius:8px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-    padding: 20px;
+    padding: 80px;
     width: max(40%,500px);
     margin: auto;
     display: flex;
@@ -43,5 +120,71 @@ body{
     align-items: center;
     justify-content: center;
     height:100%;
+    box-sizing: border-box;
+    
 }
 
+.sub > body{
+    flex-shrink: 0;
+}
+
+button{
+    margin-top:65px;
+    border:none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: #001047;
+    color:white;
+    font:inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover{
+    background-color:rgb(36, 67, 180);
+}
+
+/* Style the radio buttons to look like buttons */
+input[type="radio"] {
+    display: none;
+  }
+  
+  label[for="yes"], label[for="no"] {
+    background-color: #4CAF50; /* green */
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0px 2.5px;
+    margin:5px;
+    text-align: center;
+
+  }
+  
+  input[type="radio"]:checked + label {
+    background-color: #2E865F;
+
+  }
+ 
+a{
+    text-decoration:none;
+    color:black;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+select{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border:none;
+    border-radius:1000px;
+    padding: 0.50em 2em;
+    background-color: gray;
+    color:white;
+    font:inherit;
+    transition: 150ms ease;
+}
