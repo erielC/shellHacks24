@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="Homepage.css">
+    <script type = "text/javascript" src="Homepage.js" defer></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<body>
+    <nav>
+        <div class = "logo">Idk yet LOL</div>
+        <div class = "nav-items">
+            <a href = "/">Home</a>
+            <a href = "/">Cafes</a>
+            <a href = "/">Libraries</a>
+
+        </div>
+    </nav>
+    <section>
+        <div class = "hero">
+            <div class = "hero-container">
+                <div class = "column-left">
+
+                    <h1>Your Go-To Guide for Cafes and Study Spots</h1>
+                </div>
+                <div class = "column-right">
+     
+    
+                </div>
+                <div class = "container">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide"><img src="photos/cafeImage1 copy.jpg"></div>
+                      <div class="swiper-slide"><img src="photos/greenLibraryImg2 copy.jpeg"></div>
+                      <div class="swiper-slide"><img src="photos/cafeImage2 copy.jpg"></div>
+                      <div class="swiper-slide"><img src="photos/libraryImg1 copy.jpg"></div>
+                      <div class="swiper-slide"><img src="photos/ cafeImage3 copy.jpg"></div> 
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                    
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+       const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }, 
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+}); 
+    </script>
+</body>
+</html>
