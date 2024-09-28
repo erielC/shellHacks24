@@ -1,4 +1,4 @@
 # Ignore environment variable files
 
 # 
-keys/key.env
+src/apiKey.env
