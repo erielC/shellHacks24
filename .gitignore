@@ -1,4 +1,1 @@
-# Ignore environment variable files
-
-# 
-src/apiKey.env
+src/index.js
