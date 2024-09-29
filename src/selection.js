@@ -27,8 +27,7 @@ document.getElementById('locationType').addEventListener('change', async functio
 document.getElementById('locations').addEventListener('change', async function () {
     const locationId = this.value;
     const locationType = document.getElementById('locationType').value;
-    
-    localStorage.setItem('location',locationType);
+
 
     if (locationId && locationType) {
         try {
