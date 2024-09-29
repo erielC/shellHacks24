@@ -75,7 +75,7 @@
     </form>
 </div>
 
-<script src="authcheck.js">
+<script src="../authBackEnd/authcheck.js">
      document.getElementById('placeForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
 
@@ -95,7 +95,11 @@
             localStorage.setItem('places', JSON.stringify(places));
 
             // Redirect to the main page to view the updated list of places
-            window.location.href = '../index.html';
+            if(locationType.getItem == "cafe"){
+                window.location.href = '../Cafe&Lib/cafe.html';
+            } else {
+                window.location.href = '../index.html';
+            }
         });
 </script>
 
