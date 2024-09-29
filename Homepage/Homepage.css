@@ -165,7 +165,7 @@ section .container{
 }
 
 .imgContainer {
-    width: 60%; /* Use full width of the parent */
+    width: 80%; /* Use full width of the parent */
     display: flex; /* Use flexbox to center align if needed */
     justify-content: center; /* Center align the image */
     transform: translateY(50px);/* Maintain your existing transform */
