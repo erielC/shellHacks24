@@ -1,154 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
     <title>Blog Submission</title>
-    <link rel="icon" type="panther" href="panther.png">
-    <link rel="stylesheet" href="valid.css">
+    <link rel="icon" type="panther" href="panther.png" />
+    <link rel="stylesheet" href="valid.css" />
     <script type="text/javascript" src="auth.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="sub">
+      <div class="logo">
+        <img src="panther.png" width="100vh" height="100vh" />
+      </div>
 
-<div class="sub">
-    <div class="logo">
-        <img src="panther.png" width="100vh" height="100vh">
-    </div>
-    
-    <div class="links">
+      <div class="links">
         <p><a href="/Homepage/Homepage.html">Home Page</a></p>
-    </div>
-    <br><br>
-    <p><strong>Forum Submission</strong></p>
-    <br><br>
+      </div>
+      <br /><br />
+      <p><strong>Forum Submission</strong></p>
+      <br /><br />
 
-    <form id="locationform">
+      <form id="locationform">
         <div>
-            <select id="locationType" name="locationType" required>
-                <option value="" disabled selected>Cafe / Library</option>
-                <option value="cafe">Cafe</option>
-                <option value="library">Library</option>
-            </select>
+          <select id="locationType" name="locationType" required>
+            <option value="" disabled selected>Cafe / Library</option>
+            <option value="cafe">Cafe</option>
+            <option value="library">Library</option>
+          </select>
         </div>
 
         <div>
-            <select id="locations" name="locations">
-                <option value="" disabled selected>Select your option</option>
-                <option value="">--Select a location--</option>
-            </select>
+          <select id="locations" name="locations">
+            <option value="" disabled selected>Select your option</option>
+            <option value="">--Select a location--</option>
+          </select>
         </div>
 
         <div id="locationDetails" hidden></div>
 
         <div>
-            <label for="Rate-input">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White">
-                    <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/>
-                </svg>
-            </label>
-            <input type="number" name="Rate" id="Rate-input" placeholder="Rate: 1-5" min="1" max="5" required>
+          <label for="Rate-input">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="White"
+            >
+              <path
+                d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"
+              />
+            </svg>
+          </label>
+          <input
+            type="number"
+            name="Rate"
+            id="Rate-input"
+            placeholder="Rate: 1-5"
+            min="1"
+            max="5"
+            required
+          />
         </div>
 
         <div>
-            <label for="title-input">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White">
-                    <path d="M420-160v-520H200v-120h560v120H540v520H420Z"/>
-                </svg>
-            </label>
-            <input type="text" name="Title" id="title-input" placeholder="Title" required>
+          <label for="title-input">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="White"
+            >
+              <path d="M420-160v-520H200v-120h560v120H540v520H420Z" />
+            </svg>
+          </label>
+          <input
+            type="text"
+            name="Title"
+            id="title-input"
+            placeholder="Title"
+            required
+          />
         </div>
 
         <div>
-            <label for="body-input">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White">
-                    <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
-                </svg>
-            </label>
-            <textarea rows="7" cols="50" id="text" maxlength="250" placeholder="Write Text here" required></textarea>
+          <label for="body-input">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="White"
+            >
+              <path
+                d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"
+              />
+            </svg>
+          </label>
+          <textarea
+            rows="7"
+            cols="50"
+            id="text"
+            maxlength="250"
+            placeholder="Write Text here"
+            required
+          ></textarea>
         </div>
-        
+
         <p>Latino Owned:</p>
         <div>
-            <input type="radio" id="yes" name="answer" value="yes" required>
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="answer" value="no" required>
-            <label for="no">No</label>
+          <input type="radio" id="yes" name="answer" value="yes" required />
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="answer" value="no" required />
+          <label for="no">No</label>
         </div>
 
         <button type="submit">Submit</button>
-    </form>
-</div>
+      </form>
+    </div>
 
-<script>
-    document.getElementById('locationform').addEventListener('submit', async function(event) {
-        event.preventDefault(); 
-        const locationType = document.getElementById('locationType').value;
+    <script>
+      document
+        .getElementById("locationform")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const locationType = document.getElementById("locationType").value;
 
-        let locationDetails;
-        try {
-            const response = await fetch(`/location/${locationType}`);
-            if (!response.ok) throw new Error('Failed to fetch location details');
-            locationDetails = await response.json();
-        } catch (error) {
-            console.error('Error fetching location details:', error);
-            return;  // Exit if there's an error
-        }
+          // Create a review object based on the form inputs
+          const review = {
+            title: document.getElementById("title-input").value,
+            description: document.getElementById("text").value,
+            rating: document.getElementById("Rate-input").value,
+          };
 
-
-        // Create a review object based on the form inputs
-        const review = {
-            title: document.getElementById('title-input').value,
-            description: document.getElementById('text').value,
-            rating: document.getElementById('Rate-input').value,
-            locationName: locationDetails.name,  // Assuming the locationDetails have a 'name' field
-            locationAddress: locationDetails.address,  // Assuming it has an 'address' field
-            locationType: locationDetails.distance
-        };
-
-        // Check if the location type is 'cafe'
-        if (locationType === 'cafe') {
+          // Check if the location type is 'cafe'
+          if (locationType === "cafe") {
             // Retrieve existing reviews from localStorage or initialize as an empty array
-            let cafeReviews = JSON.parse(localStorage.getItem('cafeReviews'));
-            
+            let cafeReviews = JSON.parse(localStorage.getItem("cafeReviews"));
+
             // Check if cafeReviews is null or not an array
             if (!Array.isArray(cafeReviews)) {
-                cafeReviews = []; // If it's null or not an array, initialize it as an empty array
+              cafeReviews = []; // If it's null or not an array, initialize it as an empty array
             }
 
             // Add the new review to the array
             cafeReviews.push(review);
 
             // Save the updated array back to localStorage
-            localStorage.setItem('cafeReviews', JSON.stringify(cafeReviews));
+            localStorage.setItem("cafeReviews", JSON.stringify(cafeReviews));
 
             // Redirect to the cafe page
-            window.location.href = '../Cafe&Lib/cafe.html';
-
-        } else if (locationType === 'library') {
+            window.location.href = "../Cafe&Lib/cafe.html";
+          } else if (locationType === "library") {
             // Retrieve existing library reviews from localStorage or initialize as an empty array
-            let libReviews = JSON.parse(localStorage.getItem('libReviews'));
-            
+            let libReviews = JSON.parse(localStorage.getItem("libReviews"));
+
             // Check if libReviews is null or not an array
             if (!Array.isArray(libReviews)) {
-                libReviews = []; // If it's null or not an array, initialize it as an empty array
+              libReviews = []; // If it's null or not an array, initialize it as an empty array
             }
 
             // Add the new review to the array
             libReviews.push(review);
 
             // Save the updated array back to localStorage
-            localStorage.setItem('libReviews', JSON.stringify(libReviews));
+            localStorage.setItem("libReviews", JSON.stringify(libReviews));
 
             // Redirect to the library page
-            window.location.href = '../index.html';
-        } else {
-            alert('Please select a valid location type.');
-        }
-    });
-</script>
+            window.location.href = "../index.html";
+          } else {
+            alert("Please select a valid location type.");
+          }
+        });
+    </script>
 
-<script src="../authBackEnd/authcheck.js"></script>
-<script src="../src/selection.js"></script>
-
-</body>
+    <script src="../authBackEnd/authcheck.js"></script>
+    <script src="../src/selection.js"></script>
+  </body>
 </html>
