@@ -91,14 +91,18 @@
                 rating: document.getElementById('Rate-input').value
             };
 
-            let cafeReviews = JSON.parse(localStorage.getItem('cafeReview')) || [];
+            // Retrieve existing reviews from localStorage or initialize as an empty array
+            let cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
 
+            // Add the new review to the array
             cafeReviews.push(cafeReview);
 
-            localStorage.setItem('cafeReviews', JSON.stringify(cafeReview));
+            // Save the updated array back to localStorage
+            localStorage.setItem('cafeReviews', JSON.stringify(cafeReviews));
 
-
+            // Redirect to the cafe page
             window.location.href = '../Cafe&Lib/cafe.html';
+
         } else if (locationType === 'library') {
 
             const libReview = {
@@ -107,18 +111,23 @@
                 rating: document.getElementById('Rate-input').value
             };
 
-            let libReviews = JSON.parse(localStorage.getItem('libReview')) || [];
+            // Retrieve existing library reviews from localStorage or initialize as an empty array
+            let libReviews = JSON.parse(localStorage.getItem('libReviews')) || [];
 
+            // Add the new review to the array
             libReviews.push(libReview);
 
-            localStorage.setItem('libReviews', JSON.stringify(libReview));
+            // Save the updated array back to localStorage
+            localStorage.setItem('libReviews', JSON.stringify(libReviews));
 
+            // Redirect to the library page
             window.location.href = '../index.html';
         } else {
             alert('Please select a valid location type.');
         }
     });
 </script>
+
 
 <script src="../authBackEnd/authcheck.js"></script>
 <script src="../src/selection.js"></script>
