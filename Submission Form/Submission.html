@@ -93,9 +93,10 @@
 
             // Store updated places array in localStorage
             localStorage.setItem('places', JSON.stringify(places));
-
+            
+            const value = document.getElementById('locationType').value;
             // Redirect to the main page to view the updated list of places
-            if(locationType === 'cafe'){
+            if(value === 'cafe'){
                 window.location.href = '../Cafe&Lib/cafe.html';
             } else {
                 window.location.href = '../index.html';
