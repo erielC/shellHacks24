@@ -10,7 +10,7 @@ const port = 3000;
 app.use(cors());
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/locations', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1:27017/pantherDB', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Failed to connect to MongoDB', err));
 
@@ -26,26 +26,8 @@ const locationSchema = new mongoose.Schema({
 const Cafe = mongoose.model('Cafe', locationSchema, 'cafe');
 const Library = mongoose.model('Library', locationSchema, 'libraries');
 
-
-// Route to handle fetching locations based on type (cafe or library)
-app.get('/getLocations', async (req, res) => {
-    const locationType = req.query.type;
-    let locations = [];
-
-    try {
-        if (locationType === 'cafe') {
-            locations = await Cafe.find({});
-        } else if (locationType === 'library') {
-            locations = await Library.find({});
-        }
-        res.json(locations);
-    } catch (err) {
-        res.status(500).send('Error fetching locations');
-    }
-});
-
-// Route to show specific location details
-app.get('/showLocation', async (req, res) => {
+// Route to show specific location details (now always returning JSON)
+app.get('/showLocationB', async (req, res) => {
     const locationId = req.query.locationId;
     const locationType = req.query.type;
 
@@ -58,18 +40,16 @@ app.get('/showLocation', async (req, res) => {
         }
 
         if (location) {
-            res.send(`
-                <h2>${location.name}</h2>
-                <p>Address: ${location.address}</p>
-                <p>Distance: ${location.distance_mi} miles</p>
-                <p>Travel Time: ${location.travel_time_mins} mins</p>
-                <img src="${location.Image_url}" alt="${location.name}" width="200"/>
-            `);
+            res.json({
+                name: location.name,
+                address: location.address,
+                imageUrl: location.Image_url // Return JSON for frontend to use
+            });
         } else {
-            res.status(404).send('Location not found');
+            res.status(404).json({ message: 'Location not found' });
         }
     } catch (err) {
-        res.status(500).send('Error fetching location details');
+        res.status(500).json({ message: 'Error fetching location details', error: err });
     }
 });
 
