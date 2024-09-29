@@ -134,7 +134,7 @@
 
       try {
         // Fetch location details from the server
-        const response = await fetch(`/showLocation?locationId=${locationId}&type=${locationType}`);
+        const response = await fetch(`/showLocationB?locationId=${locationId}&type=${locationType}`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch location details');

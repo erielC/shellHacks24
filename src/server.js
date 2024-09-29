@@ -83,7 +83,7 @@ app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
-app.get('/showLocation', async (req, res) => {
+app.get('/showLocationB', async (req, res) => {
     const locationId = req.query.locationId;
     const locationType = req.query.type;
 
