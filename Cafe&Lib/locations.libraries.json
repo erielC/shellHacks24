@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "66f87346251344357cdfbc1e"
   },
-  "name": "Richter Library",
+  "name": "Richter Library",  
   "address": "1300 Memorial Drive, Coral Gables",
   "distance_mi": 9.3,
   "travel_time_mins": 22,
@@ -41,7 +41,7 @@
   "_id": {
     "$oid": "66f87346251344357cdfbc22"
   },
-  "name": "Coral Gables Library",
+  "name": "Coral Gables Library", 
   "address": "3443 Segovia Street, Coral Gables",
   "distance_mi": 9.3,
   "travel_time_mins": 23,
@@ -71,7 +71,7 @@
   "_id": {
     "$oid": "66f87346251344357cdfbc26"
   },
-  "name": "Kendall Branch Library",
+  "name": "Kendall Branch Library", THIS ONE
   "address": "9101 Southwest 97th Avenue, Miami",
   "distance_mi": 9.1,
   "travel_time_mins": 18,

@@ -12,7 +12,7 @@
   "_id": {
     "$oid": "66f86ee2251344357cdfbc0a"
   },
-  "Cafe Name": "Barnes & Noble (Kendall)",
+  "Cafe Name": "Barnes & Noble (Kendall)",  
   "Address": "Kendall Village West, 12405 North Kendall Drive, Miami",
   "Distance (mi)": 6.6,
   "Travel Time (mins)": 11,
@@ -72,7 +72,7 @@
   "_id": {
     "$oid": "66f86ee2251344357cdfbc10"
   },
-  "Cafe Name": "Panera Bread (Doral)",
+  "Cafe Name": "Panera Bread (Doral)", THIS ONE
   "Address": "9717 Northwest 41st Street, Doral",
   "Distance (mi)": 6.7,
   "Travel Time (mins)": 15,
