@@ -125,7 +125,7 @@
     </div>
 
     <script>
-      document.getElementById('placeForm').addEventListener('submit', function (event) {
+      document.getElementById('locationForm').addEventListener('submit', function (event) {
           event.preventDefault(); // Prevent form from submitting normally
 
           const place = {
@@ -144,7 +144,7 @@
           localStorage.setItem('places', JSON.stringify(places));
 
           // Redirect to the main page to view the updated list of places
-          window.location.href = '../Cafe&Lib/cafe.html';
+          window.location.href = '../Cafe&lib/cafe.html';
         });
     </script>
 
