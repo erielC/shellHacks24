@@ -209,7 +209,7 @@ section .container > *{
 
 
 
-.place-card {
+.cafeReview-card {
     display: flex;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -219,13 +219,13 @@ section .container > *{
     overflow: hidden;
 }
 
-.place-image img {
+.cafeReview-image img {
     width: 100px;
     height: 100%;
     object-fit: cover;
 }
 
-.place-content {
+.cafeReview-content {
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -233,19 +233,19 @@ section .container > *{
     width: 100%;
 }
 
-.place-name {
+.cafeReview-name {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.place-description {
+.cafeReview-description {
     font-size: 1em;
     color: #555;
     margin-bottom: 20px;
 }
 
-.place-footer {
+.cafeReview-footer {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #ddd;
@@ -254,9 +254,9 @@ section .container > *{
     color: #777;
 }
 
-.place-address,
-.place-distance,
-.place-rating {
+.cafeReview-address,
+.cafeReview-distance,
+.cafeReview-rating {
     flex: 1;
     text-align: center;
 }
