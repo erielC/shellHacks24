@@ -58,16 +58,19 @@
             <label for = "body-input">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>           
             </label>
-            <textarea rows = "7" cols = "50" id ="text" maxlength="250" placeholder="Write Text here" required></textarea>
+            <textarea rows = "7" cols = "50" id ="text" maxlength="250" placeholder="Write Text here"></textarea>
+        </div>
+        <div>
+            <select>
+                <option value="" disabled selected>Select your option</option>
+                <option value="hurr">L1</option>
+            </select>
         </div>
         
         
         <p> Latino Owned: </p>    
          
         <div>
-            
-                   
-
             <input type="radio" id="yes" name="answer" value="yes">
             <label for="yes">Yes</label>
             <input type="radio" id="no" name="answer" value="no">
@@ -78,7 +81,7 @@
     </form>
 </div>
 
-<script src="authcheck.js">
+<script src="../authBackEnd/authcheck.js">
      document.getElementById('placeForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
 
@@ -98,7 +101,7 @@
             localStorage.setItem('places', JSON.stringify(places));
 
             // Redirect to the main page to view the updated list of places
-            window.location.href = 'index.html';
+            window.location.href = '../index.html';
         });
 </script>
 </body>
