@@ -19,7 +19,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         localStorage.setItem('email', emailInput);
 
         // Redirect to the dashboard or another page
-        window.location.href = 'forum.html';
+        window.location.href = '/Submission Form/Submission.html';
         //REDIRECT TO FORM
     } else {
         // Show error message
