@@ -13,15 +13,7 @@ html{
 }
 
 
-hr{
-    position:relative;
-    transform: translate(0,230px);
-    width:400px ;
-    margin: 20px 0px 20px 445px ; /*adds space between the line and rest of the code*/
-    border: none;
-    border-top: 0.5vh solid goldenrod;
-    
-}
+
 
 
 body{
@@ -187,4 +179,8 @@ select{
     color:white;
     font:inherit;
     transition: 150ms ease;
+}
+
+::placeholder{
+    color:#001047;
 }
