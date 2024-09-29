@@ -125,77 +125,69 @@
     </div>
 
     <script>
-       document
-    .getElementById("locationform")
-    .addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const locationType = document.getElementById("locationType").value;
-      const locationId = document.getElementById("locations").value; // Assuming you select a location ID from the dropdown
-
-      try {
-        // Fetch location details from the server
-        const response = await fetch(`/showLocationB?locationId=${locationId}&type=${locationType}`);
-        
-        if (!response.ok) {
-          throw new Error('Failed to fetch location details');
-        }
-        
-        const location = await response.json(); // Assuming your server returns JSON data
-
-        // Create a review object based on the form inputs and the fetched location
-        const review = {
-          title: document.getElementById("title-input").value,
-          description: document.getElementById("text").value,
-          rating: document.getElementById("Rate-input").value,
-          name: location.name,
-          address: location.address,
-          imageUrl: location.Image_url,
-        };
-
-        // Check if the location type is 'cafe'
-        if (locationType === "cafe") {
-          // Retrieve existing reviews from localStorage or initialize as an empty array
-          let cafeReviews = JSON.parse(localStorage.getItem("cafeReviews"));
-
-          // Check if cafeReviews is null or not an array
-          if (!Array.isArray(cafeReviews)) {
-            cafeReviews = []; // If it's null or not an array, initialize it as an empty array
-          }
-
-          // Add the new review to the array
-          cafeReviews.push(review);
-
-          // Save the updated array back to localStorage
-          localStorage.setItem("cafeReviews", JSON.stringify(cafeReviews));
-
-          // Redirect to the cafe page
-          window.location.href = "../Cafe&Lib/cafe.html";
-        } else if (locationType === "library") {
-          // Retrieve existing library reviews from localStorage or initialize as an empty array
-          let libReviews = JSON.parse(localStorage.getItem("libReviews"));
-
-          // Check if libReviews is null or not an array
-          if (!Array.isArray(libReviews)) {
-            libReviews = []; // If it's null or not an array, initialize it as an empty array
-          }
-
-          // Add the new review to the array
-          libReviews.push(review);
-
-          // Save the updated array back to localStorage
-          localStorage.setItem("libReviews", JSON.stringify(libReviews));
-
-          // Redirect to the library page
-          window.location.href = "../index.html";
-        } else {
-          alert("Please select a valid location type.");
-        }
-      } catch (error) {
-        console.error('Error fetching location details:', error);
-        alert('Failed to fetch location details. Please try again.');
-      }
-    });
+        document
+            .getElementById("locationform")
+            .addEventListener("submit", async function (event) {
+                event.preventDefault();
+    
+                const locationType = document.getElementById("locationType").value;
+                const locationId = document.getElementById("locations").value; // Assuming you select a location ID from the dropdown
+    
+                try {
+                    // Fetch location details from the server
+                    const response = await fetch(`/showLocationB?locationId=${locationId}&type=${locationType}`);
+                    
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch location details');
+                    }
+                    
+                    const location = await response.json(); // Expect JSON response from server
+    
+                    // Create a review object based on the form inputs and the fetched location
+                    const review = {
+                        title: document.getElementById("title-input").value,
+                        description: document.getElementById("text").value,
+                        rating: document.getElementById("Rate-input").value,
+                        name: location.name,
+                        address: location.address,
+                        imageUrl: location.imageUrl, // Ensure the key matches what's sent by the backend
+                    };
+    
+                    // Check if the location type is 'cafe'
+                    if (locationType === "cafe") {
+                        // Retrieve existing reviews from localStorage or initialize as an empty array
+                        let cafeReviews = JSON.parse(localStorage.getItem("cafeReviews")) || [];
+    
+                        // Add the new review to the array
+                        cafeReviews.push(review);
+    
+                        // Save the updated array back to localStorage
+                        localStorage.setItem("cafeReviews", JSON.stringify(cafeReviews));
+    
+                        // Redirect to the cafe page
+                        window.location.href = "../Cafe&Lib/cafe.html";
+                    } else if (locationType === "library") {
+                        // Retrieve existing library reviews from localStorage or initialize as an empty array
+                        let libReviews = JSON.parse(localStorage.getItem("libReviews")) || [];
+    
+                        // Add the new review to the array
+                        libReviews.push(review);
+    
+                        // Save the updated array back to localStorage
+                        localStorage.setItem("libReviews", JSON.stringify(libReviews));
+    
+                        // Redirect to the library page
+                        window.location.href = "../index.html";
+                    } else {
+                        alert("Please select a valid location type.");
+                    }
+                } catch (error) {
+                    console.error('Error fetching location details:', error);
+                    alert('Failed to fetch location details. Please try again.');
+                }
+            });
     </script>
+    
 
     <script src="../authBackEnd/authcheck.js"></script>
     <script src="../src/selection.js"></script>
