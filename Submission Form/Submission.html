@@ -10,9 +10,6 @@
 </head>
 <body>
 
-    
-
-
 <div class = "sub">
     
     <div class = "logo">
@@ -31,17 +28,20 @@
 
     <form>
         <div>
-            <select>
+            <select id="locationType" name="locationType">
                 <option value="" disabled selected>Cafe / Library</option>
-                <option value="lib">Cafe</option>
-                <option value = "caf">Library</option>
+                <option value="cafe">Cafe</option>
+                <option value = "library">Library</option>
             </select>
         </div>
         <div>
-            <select>
+            <select id="locations" name="locations">
                 <option value="" disabled selected>Select your option</option>
-                <option value="hurr">L1</option>
+                <option value="">--Select a location--</option>
             </select>
+
+            <div id="locationDetails"></div>
+
         </div>
         <div>
                 <label for = "Rate-input">
@@ -98,5 +98,7 @@
             window.location.href = '../index.html';
         });
 </script>
+
+<script src="../src/selection.js"></script>
 </body>
 </html>
