@@ -106,8 +106,9 @@ textarea{
     text-align: left;
     display:flex;
     flex-direction: left;
-
 }
+
+
 .sub{   
     background-color: white;
     border-radius:8px;
