@@ -82,14 +82,14 @@
         localStorage.removeItem('isLoggedIn'); 
         localStorage.removeItem('email');
     
-        // Fetch cafeReviews from localStorage
-        const cafeReviews = JSON.parse(localStorage.getItem('places')) || [];
+        // Fetch place from localStorage
+        const place = JSON.parse(localStorage.getItem('places')) || [];
     
         // Reference to the container for the cards
-        const cafeReviewCards = document.getElementById('placeCards');
+        const placeCards = document.getElementById('placeCards');
     
-        // Generate the HTML for each cafeReview and append it to the container
-        cafeReviews.forEach((cafeReview) => {
+        // Generate the HTML for each place and append it to the container
+        place.forEach((place) => {
             const cardHTML = `
                 <center>
                 <div class="ca-container">
