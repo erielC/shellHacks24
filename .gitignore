@@ -4,3 +4,4 @@ src/librarySearch.html
 src/node_modules
 src/cafeData.json
 src/libraryData.json
+.vscode/settings.json
