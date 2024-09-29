@@ -1,0 +1,178 @@
+[{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc1e"
+  },
+  "name": "Richter Library",  
+  "address": "1300 Memorial Drive, Coral Gables",
+  "distance_mi": 9.3,
+  "travel_time_mins": 22,
+  "Image_url": "https://umlibraryeast.blob.core.windows.net/uploads/2021/05/richter-lib-building-test.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc1f"
+  },
+  "name": "Westchester Regional Library",
+  "address": "9445 Coral Way, Miami",
+  "distance_mi": 3.2,
+  "travel_time_mins": 10,
+  "Image_url": "https://mdpls.org/frontend-images/editor/mdpls/westchester-wellness-center-exterior.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc20"
+  },
+  "name": "West Flagler Branch Library",
+  "address": "5050 West Flagler Street, Miami",
+  "distance_mi": 9.7,
+  "travel_time_mins": 17,
+  "Image_url": "https://static.libnet.info/images/locations/mdpls/west-flagler-exterior.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc21"
+  },
+  "name": "International Mall Branch Library",
+  "address": "10315 Northwest 12th Street, Doral",
+  "distance_mi": 4,
+  "Image_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/International_Mall_Library.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc22"
+  },
+  "name": "Coral Gables Library", 
+  "address": "3443 Segovia Street, Coral Gables",
+  "distance_mi": 9.3,
+  "travel_time_mins": 23,
+  "Image_url": "https://static.libnet.info/frontend-images/locations/mdpls/coral-gables-branch-library-exterior.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc23"
+  },
+  "name": "Steven and Dorothea Green Library",
+  "address": "11200 Southwest 8th Street, Miami",
+  "distance_ft": 52,
+  "travel_time_mins": 1,
+  "Image_url": "https://live.staticflickr.com/65535/50236115938_792937cca6_b.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc25"
+  },
+  "name": "West Kendall Regional Library",
+  "address": "10201 Hammocks Boulevard #159, Miami",
+  "distance_mi": 10.7,
+  "travel_time_mins": 22,
+  "Image_url": "https://mdpls.libnet.info/images/locations/mdpls/west-kendall-regional.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc26"
+  },
+  "name": "Kendall Branch Library", THIS ONE
+  "address": "9101 Southwest 97th Avenue, Miami",
+  "distance_mi": 9.1,
+  "travel_time_mins": 18,
+  "Image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Exterior_view_of_Kendall_Branch_Library.jpeg.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc27"
+  },
+  "name": "University of Miami Law Library",
+  "address": "1311 Miller Road, Coral Gables",
+  "distance_mi": 9.3,
+  "travel_time_mins": 23
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc28"
+  },
+  "name": "Weeks Music Library and Technology Center",
+  "address": "5469 San Amaro Drive, Coral Gables",
+  "distance_mi": 9.1,
+  "travel_time_mins": 21
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc29"
+  },
+  "name": "Fairlawn Branch Library",
+  "address": "6376 Southwest 8th Street, West Miami",
+  "distance_mi": 5.1,
+  "travel_time_mins": 14
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc2a"
+  },
+  "name": "Doral Branch Library",
+  "address": "8551 Northwest 53rd Street a107, Doral",
+  "distance_mi": 7.9,
+  "travel_time_mins": 18
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc2b"
+  },
+  "name": "Lakes of the Meadow Branch Library",
+  "address": "4284 Southwest 152nd Avenue, Miami",
+  "distance_mi": 6.8,
+  "travel_time_mins": 18
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc2c"
+  },
+  "name": "Concord Library",
+  "address": "3882 Southwest 112th Avenue, Miami",
+  "distance_mi": 3.2,
+  "travel_time_mins": 10
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc2d"
+  },
+  "name": "South Miami Branch Library",
+  "address": "6000 Sunset Drive, South Miami",
+  "distance_mi": 9.4,
+  "travel_time_mins": 20
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc2e"
+  },
+  "name": "Tamiami Branch Library",
+  "address": "12700 Southwest 8th Street, Miami",
+  "distance_mi": 1.9,
+  "travel_time_mins": 7
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc2f"
+  },
+  "name": "Kendale Lakes Branch Library",
+  "address": "15205 Southwest 88th Street, Miami",
+  "distance_mi": 9.6,
+  "travel_time_mins": 20
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc30"
+  },
+  "name": "Architecture Research Center",
+  "address": "1223 Theo Dickinson Drive, Coral Gables",
+  "distance_mi": 10.1,
+  "travel_time_mins": 25
+},
+{
+  "_id": {
+    "$oid": "66f87346251344357cdfbc31"
+  },
+  "name": "FIU Green Library",
+  "address": "1725-1719, U.S. 41, Miami",
+  "distance_ft": 52,
+  "travel_time_mins": 1
+}]

@@ -1,0 +1,188 @@
+[{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc09"
+  },
+  "Cafe Name": "Apropo Crepes - Dolphin Mall",
+  "Address": "11401 Northwest 12th Street, Miami",
+  "Distance (mi)": 4.3,
+  "Travel Time (mins)": 11,
+  "Image_url": "https://i.ibb.co/GR7LzGy/apropo-crepes.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc0a"
+  },
+  "Cafe Name": "Barnes & Noble (Kendall)",  
+  "Address": "Kendall Village West, 12405 North Kendall Drive, Miami",
+  "Distance (mi)": 6.6,
+  "Travel Time (mins)": 11,
+  "Image_url": "https://i.ibb.co/tcmVBn8/b-n-kendall.png"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc0b"
+  },
+  "Cafe Name": "Barnes & Noble (Sunset Drive)",
+  "Address": "5701 Sunset Drive Suite 196, Miami",
+  "Distance (mi)": 9.8,
+  "Travel Time (mins)": 22,
+  "Image_url": "https://lh3.googleusercontent.com/p/AF1QipM33fbO3I_IV1y3b_Yh51qJw2p6-zKtAfPG5fUz=s1360-w1360-h1020"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc0c"
+  },
+  "Cafe Name": "Karla Cuban Bakery",
+  "Address": "6474 W Flagler St, Miami, FL 33144",
+  "Distance (mi)": 9.1,
+  "Travel Time (mins)": 15,
+  "Image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/cYClNtFTzljpf7_TIhr7TA/348s.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc0d"
+  },
+  "Cafe Name": "Books & Books (Coral Gables)",
+  "Address": "265 Aragon Avenue, Coral Gables",
+  "Distance (mi)": 12.2,
+  "Travel Time (mins)": 23,
+  "Image_url": "https://s24214.pcdn.co/wp-content/uploads/2016/02/Books-and-books-coral-gables.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc0e"
+  },
+  "Cafe Name": "Caribe Cafe",
+  "Address": "3953 NW 7th St, Miami, FL 33126",
+  "Distance (mi)": 11.7,
+  "Travel Time (mins)": 19,
+  "Image_url": "https://i.ibb.co/QFpvdh7/Screenshot-2024-09-28-190911.png"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc0f"
+  },
+  "Cafe Name": "Brioche Doree",
+  "Address": "Miami International Airport, H-J Connector - South Terminal, 2100 NW 42nd Ave, Miami",
+  "Distance (mi)": 11.9,
+  "Travel Time (mins)": 20,
+  "Image_url": "https://www.airportxnews.com/wp-content/uploads/2015/08/BD-Kiosk-final.jpg.webp"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc10"
+  },
+  "Cafe Name": "Panera Bread (Doral)", THIS ONE
+  "Address": "9717 Northwest 41st Street, Doral",
+  "Distance (mi)": 6.7,
+  "Travel Time (mins)": 15,
+  "Image_url": "https://i.ibb.co/5RVHQHN/Screenshot-2024-09-28-192012.png"
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc11"
+  },
+  "Cafe Name": "Starbucks (Doral)",
+  "Address": "10690 Northwest 19th Street, Doral",
+  "Distance (mi)": 4,
+  "Travel Time (mins)": 11
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc12"
+  },
+  "Cafe Name": "Starbucks (Bird Rd)",
+  "Address": "7795 Southwest 40th Street, Miami",
+  "Distance (mi)": 6,
+  "Travel Time (mins)": 15
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc13"
+  },
+  "Cafe Name": "Barnes & Noble (Coral Gables)",
+  "Address": "152 Miracle Mile, Coral Gables",
+  "Distance (mi)": 12.4,
+  "Travel Time (mins)": 23
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc14"
+  },
+  "Cafe Name": "Moshes Nosh Bar",
+  "Address": "11155 Southwest 112th Avenue, Miami",
+  "Distance (mi)": 10,
+  "Travel Time (mins)": 17
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc15"
+  },
+  "Cafe Name": "Cafe Pili",
+  "Address": "9200 South Dadeland Boulevard, Miami",
+  "Distance (mi)": 9.7,
+  "Travel Time (mins)": 20
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc16"
+  },
+  "Cafe Name": "Lucys Colombian Lingerie",
+  "Address": "11865 SW 26th St # Gu7, Miami",
+  "Distance (mi)": 2.3,
+  "Travel Time (mins)": 9
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc17"
+  },
+  "Cafe Name": "Starbucks",
+  "Address": "292 Miracle Mile, Coral Gables",
+  "Distance (mi)": 12.2,
+  "Travel Time (mins)": 22
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc18"
+  },
+  "Cafe Name": "Starbucks",
+  "Address": "9709-101 Northwest 41st Street, Doral",
+  "Distance (mi)": 6.7,
+  "Travel Time (mins)": 15
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc19"
+  },
+  "Cafe Name": "Whisk Gourmet Food & Catering",
+  "Address": "7382 Southwest 56th Avenue, South Miami",
+  "Distance (mi)": 10,
+  "Travel Time (mins)": 24
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc1a"
+  },
+  "Cafe Name": "Starbucks",
+  "Address": "7840 Northwest 25th Street, Doral",
+  "Distance (mi)": 7.5,
+  "Travel Time (mins)": 13
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc1b"
+  },
+  "Cafe Name": "Dunkin'",
+  "Address": "2600 Northwest 87th Avenue Unit 7, Miami",
+  "Distance (mi)": 6.6,
+  "Travel Time (mins)": 14
+},
+{
+  "_id": {
+    "$oid": "66f86ee2251344357cdfbc1c"
+  },
+  "Cafe Name": "Mojo Donuts",
+  "Address": "8870 SW 40th St #13, Miami, FL 33165",
+  "Distance (mi)": 3.9,
+  "Travel Time (mins)": 12
+}]
