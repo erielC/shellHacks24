@@ -30,5 +30,5 @@ window.addEventListener('scroll', () => {
     content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
     image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
 
-    border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
+    border.style.width = `${scroll / (sectionY.top + section_height) *50}%`;
 })

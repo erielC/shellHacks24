@@ -38,21 +38,27 @@
             </select>
         </div>
         <div>
+            <select>
+                <option value="" disabled selected>Select your option</option>
+                <option value="hurr">L1</option>
+            </select>
+        </div>
+        <div>
                 <label for = "Rate-input">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>                </label> 
-                <input type = "number" name = "Rate" id = "Rate-input" placeholder = "Rate: 1-5" min="1" max="5">
+                <input type = "number" name = "Rate" id = "Rate-input" placeholder = "Rate: 1-5" min="1" max="5" required>
         </div>
         <div>
         <label for = "title-input">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White"><path d="M420-160v-520H200v-120h560v120H540v520H420Z"/></svg> 
         </label> 
-        <input type = "text" name = "Title" id = "title-input" placeholder = "Title">
+        <input type = "text" name = "Title" id = "title-input" placeholder = "Title" required>
         </div>
         <div>
             <label for = "body-input">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="White"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>           
             </label>
-            <textarea rows = "7" cols = "50" id ="text" maxlength="250" placeholder="Write Text here" plach></textarea>
+            <textarea rows = "7" cols = "50" id ="text" maxlength="250" placeholder="Write Text here"></textarea>
         </div>
         <div>
             <select>
@@ -61,12 +67,10 @@
             </select>
         </div>
         
+        
         <p> Latino Owned: </p>    
          
         <div>
-            
-                   
-
             <input type="radio" id="yes" name="answer" value="yes">
             <label for="yes">Yes</label>
             <input type="radio" id="no" name="answer" value="no">
@@ -76,5 +80,29 @@
         <button type = "submit">Submit</button>
     </form>
 </div>
+
+<script src="../authBackEnd/authcheck.js">
+     document.getElementById('placeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            const place = {
+                name: document.getElementById('title-input').value,
+                description: document.getElementById('text').value,
+                rating: document.getElementById('Rate-input').value
+            };
+
+            // Get existing places from localStorage or set empty array
+            let places = JSON.parse(localStorage.getItem('places')) || [];
+
+            // Add new place to array
+            places.push(place);
+
+            // Store updated places array in localStorage
+            localStorage.setItem('places', JSON.stringify(places));
+
+            // Redirect to the main page to view the updated list of places
+            window.location.href = 'index.html';
+        });
+</script>
 </body>
 </html>
