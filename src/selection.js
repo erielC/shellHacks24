@@ -40,7 +40,12 @@ document.getElementById('locationType').addEventListener('change', async functio
 document.getElementById('locations').addEventListener('change', async function () {
     const locationId = this.value;
     const locationType = document.getElementById('locationType').value;
+<<<<<<< HEAD
     
+=======
+
+
+>>>>>>> 680671bae3fccb8ead33ee59b2174a2267af7433
     if (locationId && locationType) {
         try {
             const response = await fetch(`http://localhost:3000/showLocation?locationId=${locationId}&type=${locationType}`);
