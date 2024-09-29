@@ -84,18 +84,25 @@
         event.preventDefault(); 
         const locationType = document.getElementById('locationType').value;
 
-        if (locationType === 'cafe') {
-            const cafeReview = {
-                title: document.getElementById('title-input').value,
-                description: document.getElementById('text').value,
-                rating: document.getElementById('Rate-input').value
-            };
+        // Create a review object based on the form inputs
+        const review = {
+            title: document.getElementById('title-input').value,
+            description: document.getElementById('text').value,
+            rating: document.getElementById('Rate-input').value
+        };
 
+        // Check if the location type is 'cafe'
+        if (locationType === 'cafe') {
             // Retrieve existing reviews from localStorage or initialize as an empty array
-            let cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+            let cafeReviews = JSON.parse(localStorage.getItem('cafeReviews'));
+            
+            // Check if cafeReviews is null or not an array
+            if (!Array.isArray(cafeReviews)) {
+                cafeReviews = []; // If it's null or not an array, initialize it as an empty array
+            }
 
             // Add the new review to the array
-            cafeReviews.push(cafeReview);
+            cafeReviews.push(review);
 
             // Save the updated array back to localStorage
             localStorage.setItem('cafeReviews', JSON.stringify(cafeReviews));
@@ -104,18 +111,16 @@
             window.location.href = '../Cafe&Lib/cafe.html';
 
         } else if (locationType === 'library') {
-
-            const libReview = {
-                title: document.getElementById('title-input').value,
-                description: document.getElementById('text').value,
-                rating: document.getElementById('Rate-input').value
-            };
-
             // Retrieve existing library reviews from localStorage or initialize as an empty array
-            let libReviews = JSON.parse(localStorage.getItem('libReviews')) || [];
+            let libReviews = JSON.parse(localStorage.getItem('libReviews'));
+            
+            // Check if libReviews is null or not an array
+            if (!Array.isArray(libReviews)) {
+                libReviews = []; // If it's null or not an array, initialize it as an empty array
+            }
 
             // Add the new review to the array
-            libReviews.push(libReview);
+            libReviews.push(review);
 
             // Save the updated array back to localStorage
             localStorage.setItem('libReviews', JSON.stringify(libReviews));
@@ -127,7 +132,6 @@
         }
     });
 </script>
-
 
 <script src="../authBackEnd/authcheck.js"></script>
 <script src="../src/selection.js"></script>
