@@ -105,7 +105,7 @@ a:hover{
 
 .txt{
     font-style: inherit;
-    font-weight: 325;
+    font-weight: 335;
     font-size:35pt;
     color:gray;
     opacity:10;
@@ -120,7 +120,7 @@ h1{
     overflow:hidden;
     line-height:1.5;
     color:lightgray;
-    -webkit-text-stroke: 2px gray;
+    -webkit-text-stroke: 2px rgb(54, 51, 51);
 }
 
 h1 span{
