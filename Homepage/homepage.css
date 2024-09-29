@@ -165,7 +165,7 @@ section .container{
 }
 
 .imgContainer {
-    width: 80%; /* Use full width of the parent */
+    width: 100%; /* Use full width of the parent */
     display: flex; /* Use flexbox to center align if needed */
     justify-content: center; /* Center align the image */
     transform: translateY(50px);/* Maintain your existing transform */
@@ -222,7 +222,7 @@ section .container{
     }
     .theCrew {
         max-width: 200px; /* Set a maximum width */
-        width: 80%; /* Ensures the image takes the full width of its container */
+        width: 100%; /* Ensures the image takes the full width of its container */
         height: 100vh; /* Maintain aspect ratio */
         display: block; /* Ensures no extra space below the image */
         margin: 0 auto;/* Center the image if it’s smaller than the container */
