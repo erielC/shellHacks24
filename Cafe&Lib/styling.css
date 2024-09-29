@@ -137,5 +137,54 @@ h1 span{
     }
 }
 
+.cafeReview-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 
+.cafeReview-image img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
 
+.cafeReview-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cafeReview-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cafeReview-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cafeReview-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.cafeReview-address,
+.cafeReview-distance,
+.cafeReview-rating {
+    flex: 1;
+    text-align: center;
+}

@@ -25,6 +25,52 @@
         <div class = "txt">
             <h1><span>Cafe Blog</span></h1>
         </div>
+    </section>
+
+    <div></div>
+        <p><a href="auth.html">Add Button</a></p>
+        <br>
+    </div>
+
+    <h1>cafeReviews List</h1>
+
+    <div id="cafeReviewCards"></div>
+
+
+<script>
+    localStorage.removeItem('isLoggedIn'); 
+    localStorage.removeItem('email');
+
+    // Fetch cafeReviews from localStorage
+    const cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+
+    // Reference to the container for the cards
+    const cafeReviewCards = document.getElementById('cafeReviewCards');
+
+    // Generate the HTML for each cafeReview and append it to the container
+    cafeReviews.forEach((cafeReview) => {
+        const cardHTML = `
+            <div class="cafeReview-card">
+                <div class="cafeReview-image">
+                    <img src="cafeReviewholder.jpg" alt="cafeReview Image">
+                </div>
+                <div class="cafeReview-content">
+                    <h2 class="cafeReview-name">${cafeReview.name}</h2>
+                    <p class="cafeReview-description">${cafeReview.description}</p>
+                    <div class="cafeReview-footer">
+                        <span class="cafeReview-address">${cafeReview.address}</span>
+                        <span class="cafeReview-distance">${cafeReview.distance} miles</span>
+                        <span class="cafeReview-rating">★ ${cafeReview.rating}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        cafeReviewCards.innerHTML += cardHTML;
+    });
+</script>
+    <script src="/Homepage/Homepage.js"></script>
+    <script src="/src/server.js"></script>
+=======
     </div>
     </header>
     
