@@ -16,6 +16,7 @@ document.getElementById('locationType').addEventListener('change', async functio
                 option.textContent = location.name;
                 locationsDropdown.appendChild(option);
             });
+
         } catch (error) {
             console.error('Error fetching locations:', error);
         }
@@ -26,6 +27,8 @@ document.getElementById('locationType').addEventListener('change', async functio
 document.getElementById('locations').addEventListener('change', async function () {
     const locationId = this.value;
     const locationType = document.getElementById('locationType').value;
+    
+    localStorage.setItem('location',locationType);
 
     if (locationId && locationType) {
         try {
