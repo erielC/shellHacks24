@@ -95,9 +95,11 @@
             localStorage.setItem('places', JSON.stringify(places));
             
             // Redirect to the main page to view the updated list of places
-            
+            if(location === 'cafe'){
                 window.location.href = '../Cafe&Lib/cafe.html';
-            
+            } else {
+                window.location.href = '../index.html';
+            }
         });
 </script>
 
