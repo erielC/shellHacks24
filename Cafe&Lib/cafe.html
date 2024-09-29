@@ -27,36 +27,6 @@
         </div>
     </section>
 
-
-<script>
-    localStorage.removeItem('isLoggedIn'); 
-    localStorage.removeItem('email');
-
-    // Fetch cafeReviews from localStorage
-    const cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
-
-    // Reference to the container for the cards
-    const cafeReviewCards = document.getElementById('cafeReviewCards');
-
-    // Generate the HTML for each cafeReview and append it to the container
-    cafeReviews.forEach((cafeReview) => {
-        const cardHTML = `
-            <center>
-            <div class="ca-container">
-                <img src="https://i.ibb.co/tcmVBn8/b-n-kendall.png" alt="caImage" class="ca-image">
-                <div class="ca-info">
-                    <h2></h2>
-                    <p><strong>Name:</strong> Barnes & Noble (Coral Gables)</p>
-                    <p><strong>Address:</strong> 152 Miracle Mile, Coral Gables, FL 33134</p>
-                    <p><strong>Review: </strong>${place.text}</p>
-                    <p><strong>#:</strong> ${place.rating}/5</p>
-                </div>
-            </div>   
-        </center>
-        `;
-        cafeReviewCards.innerHTML += cardHTML;
-    });
-</script>
     <script src="/Homepage/Homepage.js"></script>
     <script src="/src/server.js"></script>
     </div>
@@ -99,7 +69,7 @@
             </div>
         </div>
         <div id="placeCards"></div>
-        
+
         <div>
             <p><a href="../authBackEnd/auth.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="Black"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></a></p>
             <br>
@@ -107,6 +77,36 @@
         </center>
 
     </main>
+
+    <script>
+        localStorage.removeItem('isLoggedIn'); 
+        localStorage.removeItem('email');
+    
+        // Fetch cafeReviews from localStorage
+        const cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+    
+        // Reference to the container for the cards
+        const cafeReviewCards = document.getElementById('cafeReviewCards');
+    
+        // Generate the HTML for each cafeReview and append it to the container
+        cafeReviews.forEach((cafeReview) => {
+            const cardHTML = `
+                <center>
+                <div class="ca-container">
+                    <img src="https://i.ibb.co/tcmVBn8/b-n-kendall.png" alt="caImage" class="ca-image">
+                    <div class="ca-info">
+                        <h2></h2>
+                        <p><strong>Name:</strong> Barnes & Noble (Coral Gables)</p>
+                        <p><strong>Address:</strong> 152 Miracle Mile, Coral Gables, FL 33134</p>
+                        <p><strong>Review: </strong>${place.text}</p>
+                        <p><strong>#:</strong> ${place.rating}/5</p>
+                    </div>
+                </div>   
+            </center>
+            `;
+            cafeReviewCards.innerHTML += cardHTML;
+        });
+    </script>
 
     <script src="caf.js"></script>
 </body>
