@@ -65,6 +65,13 @@ app.get('/showLocation', async (req, res) => {
                 <p>Travel Time: ${location.travel_time_mins} mins</p>
                 <img src="${location.Image_url}" alt="${location.name}" width="200"/>
             `);
+            const place = {
+                locationDistance: location.distance_mi,
+                locationTime: location.travel_time_mins,
+                image: location.Image_url,
+                address: location.address,
+                nameOfLocation: locationName
+            }
         } else {
             res.status(404).send('Location not found');
         }

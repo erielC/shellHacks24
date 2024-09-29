@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // User is logged in, show the logged-in content
         const email = localStorage.getItem('email');
         console.log('email:', email);
-        contentDiv.innerHTML = `<h1>Welcome to form!</h1><p>Logged in as: ${email}</p>`;
     } else {
         // User is not logged in, show a different message
         alert("Error: Not Auth");
