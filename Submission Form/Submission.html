@@ -106,18 +106,14 @@
             if (!Array.isArray(cafeReviews)) {
                 cafeReviews = []; // If it's null or not an array, initialize it as an empty array
             }
-=======
-<script src="../authBackEnd/authcheck.js">
-     document.getElementById('placeForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting normally
-
+            
             // Add the new review to the array
             cafeReviews.push(review);
 
             // Save the updated array back to localStorage
-            localStorage.setItem('cafeReviews', JSON.stringify(cafeReviews));
+            localStorage.setItem('cafeReviews', JSON.stringify(libReviews));
 
-            // Redirect to the cafe page
+            // Redirect to the library page
             window.location.href = '../Cafe&Lib/cafe.html';
 
         } else if (locationType === 'library') {
@@ -141,9 +137,6 @@
             alert('Please select a valid location type.');
         }
     });
-            // Redirect to the main page to view the updated list of places
-            window.location.href = '../index.html';
-        });
 </script>
 
 <script src="../authBackEnd/authcheck.js"></script>
