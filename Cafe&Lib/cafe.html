@@ -27,56 +27,82 @@
         </div>
     </section>
 
-    <div></div>
-        <p><a href="auth.html">Add Button</a></p>
-        <br>
-    </div>
-
-    <h1>cafeReviews List</h1>
-
-    <div id="cafeReviewCards"></div>
-
-
-<script>
-    localStorage.removeItem('isLoggedIn'); 
-    localStorage.removeItem('email');
-
-    // Fetch cafeReviews from localStorage
-    const cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
-
-    // Reference to the container for the cards
-    const cafeReviewCards = document.getElementById('cafeReviewCards');
-
-    // Generate the HTML for each cafeReview and append it to the container
-    cafeReviews.forEach((cafeReview) => {
-        const cardHTML = `
-            <div class="cafeReview-card">
-                <div class="cafeReview-image">
-                    <img src="cafeReviewholder.jpg" alt="cafeReview Image">
-                </div>
-                <div class="cafeReview-content">
-                    <h2 class="cafeReview-name">${cafeReview.name}</h2>
-                    <p class="cafeReview-description">${cafeReview.description}</p>
-                    <div class="cafeReview-footer">
-                        <span class="cafeReview-address">${cafeReview.address}</span>
-                        <span class="cafeReview-distance">${cafeReview.distance} miles</span>
-                        <span class="cafeReview-rating">★ ${cafeReview.rating}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-        cafeReviewCards.innerHTML += cardHTML;
-    });
-</script>
     <script src="/Homepage/Homepage.js"></script>
     <script src="/src/server.js"></script>
-=======
     </div>
     </header>
     
     <main class="content">
-        
+        <center>
+            <div class="ca-container">
+            <img src="https://i.ibb.co/tcmVBn8/b-n-kendall.png" alt="caImage" class="ca-image">
+            <div class="ca-info">
+                <h2>Barnes & Noble (Kendall)</h2>
+                <p><strong>Address:</strong> Kendall Village West, 12405 North Kendall Drive, Miami</p>
+                <p><strong>Review: </strong> I love this cafe! The environment and the employees all contribute in helping it fill the needs for students who want to study. </p>
+                <p><strong>#:</strong> 4/5</p>
+            </div>
+        </div>   
+        </center>
+        <center>
+            <div class="ca-container">
+            <img src="https://s24214.pcdn.co/wp-content/uploads/2016/02/Books-and-books-coral-gables.jpg" alt="caImage" class="ca-image">
+            <div class="ca-info">
+                <h2>Books & Books (Coral Gables)</h2>
+                <p><strong>Address:</strong> 265 Aragon Avenue, Coral Gables</p>
+                <p><strong>Review: </strong> Great cafe with a nice selection of books, tends to be really quiet and nice for studying.</p>
+                <p><strong>#:</strong> 5/5</p>
+            </div>
+        </div>   
+        </center>
+        <center>
+            <div class="ca-container">
+            <img src="https://i.ibb.co/5RVHQHN/Screenshot-2024-09-28-192012.png" alt="caImage" class="ca-image">
+            <div class="ca-info">
+                <h2>Panera Bread</h2>
+                <p><strong>Address:</strong> 9717 Northwest 41st Street, Doral</p>
+                <p><strong>Review: </strong> Very good sandwiches and nice environment, but it lacks a quiet environment.</p>
+                <p><strong>#:</strong> 3/5</p>
+            </div>
+        </div>
+        <div id="placeCards"></div>
+
+        <div>
+            <p><a href="../authBackEnd/auth.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="Black"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></a></p>
+            <br>
+        </div>
+        </center>
+
     </main>
+
+    <script>
+        localStorage.removeItem('isLoggedIn'); 
+        localStorage.removeItem('email');
+    
+        // Fetch place from localStorage
+        const place = JSON.parse(localStorage.getItem('places')) || [];
+    
+        // Reference to the container for the cards
+        const placeCards = document.getElementById('placeCards');
+    
+        // Generate the HTML for each place and append it to the container
+        place.forEach((place) => {
+            const cardHTML = `
+                <center>
+                <div class="ca-container">
+                    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/ppKahvHX9DmRMDOfQllvyQ/348s.jpg" alt="caImage" class="ca-image">
+                    <div class="ca-info">
+                        <h2>Barnes & Nobles (Coral Gables)</h2>
+                        <p><strong>Address:</strong> 152 Miracle Mile, Coral Gables, FL 33134</p>
+                        <p><strong>Review: </strong>${place.text}</p>
+                        <p><strong>#:</strong> ${place.rating}/5</p>
+                    </div>
+                </div>   
+            </center>
+            `;
+            placeCards.innerHTML += cardHTML;
+        });
+    </script>
 
     <script src="caf.js"></script>
 </body>
