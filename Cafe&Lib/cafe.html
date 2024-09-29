@@ -46,41 +46,40 @@
         <br>
     </div>
 
-    <h1>Places List</h1>
+    <h1>cafeReviews List</h1>
 
-    <div id="placeCards"></div>
+    <div id="cafeReviewCards"></div>
 
 
 <script>
     localStorage.removeItem('isLoggedIn'); 
     localStorage.removeItem('email');
 
-    // Fetch places from localStorage
-    const places = JSON.parse(localStorage.getItem('places')) || [];
+    // Fetch cafeReviews from localStorage
+    const cafeReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
 
     // Reference to the container for the cards
-    const placeCards = document.getElementById('placeCards');
+    const cafeReviewCards = document.getElementById('cafeReviewCards');
 
-    // Generate the HTML for each place and append it to the container
-    places.forEach((place) => {
+    // Generate the HTML for each cafeReview and append it to the container
+    cafeReviews.forEach((cafeReview) => {
         const cardHTML = `
-            <div class="place-card">
-                <div class="place-image">
-                    <img src="placeholder.jpg" alt="Place Image">
+            <div class="cafeReview-card">
+                <div class="cafeReview-image">
+                    <img src="cafeReviewholder.jpg" alt="cafeReview Image">
                 </div>
-                <div class="place-content">
-                    <h2 class="place-name">${place.name}</h2>
-                    <p class="place-description">${place.description}</p>
-                    <div class="place-footer">
-                        <span class="place-address">${place.address}</span>
-                        <span class="place-distance">${place.distance} miles</span>
-                        <span class="place-rating">★ ${place.rating}</span>
-                        <span class="place-address"> ${place.address}</span>
+                <div class="cafeReview-content">
+                    <h2 class="cafeReview-name">${cafeReview.name}</h2>
+                    <p class="cafeReview-description">${cafeReview.description}</p>
+                    <div class="cafeReview-footer">
+                        <span class="cafeReview-address">${cafeReview.address}</span>
+                        <span class="cafeReview-distance">${cafeReview.distance} miles</span>
+                        <span class="cafeReview-rating">★ ${cafeReview.rating}</span>
                     </div>
                 </div>
             </div>
         `;
-        placeCards.innerHTML += cardHTML;
+        cafeReviewCards.innerHTML += cardHTML;
     });
 </script>
     

@@ -81,29 +81,38 @@
 
 <script>
     document.getElementById('locationform').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form from submitting normally
-
-        // Get values from form fields
+        event.preventDefault(); 
         const locationType = document.getElementById('locationType').value;
-        const place = {
-            title: document.getElementById('title-input').value,
-            description: document.getElementById('text').value,
-            rating: document.getElementById('Rate-input').value
-        };
 
-        // Get existing places from localStorage or set empty array
-        let places = JSON.parse(localStorage.getItem('places')) || [];
-
-        // Add new place to the array
-        places.push(place);
-
-        // Store updated places array in localStorage
-        localStorage.setItem('places', JSON.stringify(places));
-
-        // Redirect based on locationType selection
         if (locationType === 'cafe') {
+            const cafeReview = {
+                title: document.getElementById('title-input').value,
+                description: document.getElementById('text').value,
+                rating: document.getElementById('Rate-input').value
+            };
+
+            let cafeReviews = JSON.parse(localStorage.getItem('cafeReview')) || [];
+
+            cafeReviews.push(cafeReview);
+
+            localStorage.setItem('cafeReviews', JSON.stringify(cafeReview));
+
+
             window.location.href = '../Cafe&Lib/cafe.html';
         } else if (locationType === 'library') {
+
+            const libReview = {
+                title: document.getElementById('title-input').value,
+                description: document.getElementById('text').value,
+                rating: document.getElementById('Rate-input').value
+            };
+
+            let libReviews = JSON.parse(localStorage.getItem('libReview')) || [];
+
+            libReviews.push(libReview);
+
+            localStorage.setItem('libReviews', JSON.stringify(libReview));
+
             window.location.href = '../index.html';
         } else {
             alert('Please select a valid location type.');
