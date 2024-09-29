@@ -26,7 +26,7 @@
 
     <br><br>
 
-    <form>
+    <form id="locationform">
         <div>
             <select id="locationType" name="locationType">
                 <option value="" disabled selected>Cafe / Library</option>
@@ -71,12 +71,12 @@
             <label for="no">No</label>
         </div>
 
-        <button type = "submit">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </div>
 
 <script src="../authBackEnd/authcheck.js">
-     document.getElementById('placeForm').addEventListener('submit', function(event) {
+     document.getElementById('locationform').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
 
             const place = {
@@ -94,7 +94,6 @@
             // Store updated places array in localStorage
             localStorage.setItem('places', JSON.stringify(places));
             
-            const value = document.getElementById('locationType').value;
             // Redirect to the main page to view the updated list of places
             if(location === 'cafe'){
                 window.location.href = '../Cafe&Lib/cafe.html';
