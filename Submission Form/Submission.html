@@ -86,7 +86,7 @@
 
         let locationDetails;
         try {
-            const response = await fetch(`/location-details/${locationType}`);
+            const response = await fetch(`/location/${locationType}`);
             if (!response.ok) throw new Error('Failed to fetch location details');
             locationDetails = await response.json();
         } catch (error) {
