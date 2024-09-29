@@ -28,9 +28,6 @@
     </section>
 
 
-    <div id="placeCards"></div>
-
-
 <script>
     localStorage.removeItem('isLoggedIn'); 
     localStorage.removeItem('email');
@@ -44,20 +41,17 @@
     // Generate the HTML for each cafeReview and append it to the container
     cafeReviews.forEach((cafeReview) => {
         const cardHTML = `
-            <div class="cafeReview-card">
-                <div class="cafeReview-image">
-                    <img src="cafeReviewholder.jpg" alt="cafeReview Image">
+            <center>
+            <div class="ca-container">
+                <img src="https://i.ibb.co/tcmVBn8/b-n-kendall.png" alt="caImage" class="ca-image">
+                <div class="ca-info">
+                    <h2></h2>
+                    <p><strong>Name:</strong> Barnes & Noble (Kendall)</p>
+                    <p><strong>Address:</strong> Kendall Village West, 12405 North Kendall Drive, Miami</p>
+                    <p><strong>Review: </strong>${place.text}</p>
                 </div>
-                <div class="cafeReview-content">
-                    <h2 class="cafeReview-name">${cafeReview.name}</h2>
-                    <p class="cafeReview-description">${cafeReview.description}</p>
-                    <div class="cafeReview-footer">
-                        <span class="cafeReview-address">${cafeReview.address}</span>
-                        <span class="cafeReview-distance">${cafeReview.distance} miles</span>
-                        <span class="cafeReview-rating">★ ${cafeReview.rating}</span>
-                    </div>
-                </div>
-            </div>
+            </div>   
+        </center>
         `;
         cafeReviewCards.innerHTML += cardHTML;
     });
@@ -109,6 +103,8 @@
         </div>
         </center>
 
+        
+    <div id="placeCards"></div>
 
     </main>
 
