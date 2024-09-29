@@ -82,3 +82,29 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+app.get('/showLocation', async (req, res) => {
+    const locationId = req.query.locationId;
+    const locationType = req.query.type;
+
+    try {
+        let location;
+        if (locationType === 'cafe') {
+            location = await Cafe.findById(locationId);
+        } else if (locationType === 'library') {
+            location = await Library.findById(locationId);
+        }
+
+        if (location) {
+            res.json({ // Change this to send JSON
+                name: location.name,
+                address: location.address,
+                imageUrl: location.Image_url // Ensure this field is correct
+            });
+        } else {
+            res.status(404).json({ message: 'Location not found' }); // Return JSON for not found
+        }
+    } catch (err) {
+        res.status(500).json({ message: 'Error fetching location details' }); // Return JSON for error
+    }
+});
