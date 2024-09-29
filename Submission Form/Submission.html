@@ -82,9 +82,23 @@
      document.getElementById('locationform').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
 
+            
+            let location;
+            if (locationType === 'cafe') {
+                location = Cafe.findById(locationId);
+            } else if (locationType === 'library') {
+                location = Library.findById(locationId);
+            }
+            
+
             const place = {
-                name: document.getElementById('title-input').value,
+                title: document.getElementById('title-input').value,
                 description: document.getElementById('text').value,
+                locationDistance: location.distance_mi,
+                locationTime: location.travel_time_mins,
+                image: location.Image_url,
+                address: location.address,
+                nameOfLocation: locationName,
                 rating: document.getElementById('Rate-input').value
             };
 
