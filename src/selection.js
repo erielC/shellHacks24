@@ -1,5 +1,18 @@
+document.addEventListener('DOMContentLoaded', async function () {
+    const savedLocationType = localStorage.getItem('location');
+
+    if (savedLocationType) {
+        const locationTypeDropdown = document.getElementById('locationType');
+        locationTypeDropdown.value = savedLocationType;
+
+        // Trigger the change event to load the locations
+        locationTypeDropdown.dispatchEvent(new Event('change'));
+    }
+});
+
 document.getElementById('locationType').addEventListener('change', async function () {
     const locationType = this.value;
+    localStorage.setItem('location',locationType);
     const locationsDropdown = document.getElementById('locations');
     
     // Clear the previous dropdown options
@@ -28,8 +41,6 @@ document.getElementById('locations').addEventListener('change', async function (
     const locationId = this.value;
     const locationType = document.getElementById('locationType').value;
     
-    localStorage.setItem('location',locationType);
-
     if (locationId && locationType) {
         try {
             const response = await fetch(`http://localhost:3000/showLocation?locationId=${locationId}&type=${locationType}`);
