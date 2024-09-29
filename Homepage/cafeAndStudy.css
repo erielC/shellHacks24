@@ -1,60 +1,93 @@
- * {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: white;
+    font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background-color: antiquewhite;
+}
+
 .howitworks {
-    width : 80%;
+    width: 100%;
     margin: auto;
-    text-align:center;
+    text-align: center;
     padding: 100px;
+    background-color: antiquewhite;
 }
+
 h1 {
     font-size: 40px;
     font-weight: 600;
 }
+
 p {
-  color: black;  
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 22px;
-  padding: 10px;
+    color: black;  
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    border: 1px solid white; /* Add white border */
+    border-radius: 5px; /* Optional: round the corners */
+    margin: 10px 0; /* Space between paragraphs */
 }
 
 .row {
     gap: 20px;
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .resources {
+    text-decoration: none;
     flex-basis: 31%;
     background: rgb(255, 255, 255);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 10px 12px;
     box-sizing: border-box;
-    transition: 0.5s;
-    img {
-        width: 500px;
-        max-height: auto;
-        max-width: 500px;
-        display: block;
-        margin: 0 auto;
-    }
+    transition: transform 0.5s, box-shadow 0.5s; 
+    border: 1px solid #ccc; 
+    margin: 1rem; 
+    font-size: 40px;
 }
+
+.resources:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 h3 {
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
     font-size: 40px;
+    border: 1px solid white; /* Add white border */
+    border-radius: 5px; /* Optional: round the corners */
+    padding: 5px; /* Optional: add padding for better appearance */
 }
-.resources:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+a{
+    text-decoration: none;
+    font:inherit;
+    color:black;
 }
+img {
+    width: 500px;
+    max-height: auto;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
 @media(max-width: 700px) {
     .row {
         flex-direction: column;
     }
+   
 }
+
+
