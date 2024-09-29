@@ -39,9 +39,11 @@ p {
     gap: 20px;
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .resources {
+    text-decoration: none;
     flex-basis: 31%;
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -68,7 +70,11 @@ h3 {
     border-radius: 5px; /* Optional: round the corners */
     padding: 5px; /* Optional: add padding for better appearance */
 }
-
+a{
+    text-decoration: none;
+    font:inherit;
+    color:black;
+}
 img {
     width: 500px;
     max-height: auto;
@@ -81,4 +87,7 @@ img {
     .row {
         flex-direction: column;
     }
+   
 }
+
+
