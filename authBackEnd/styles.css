@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+}
+hr{
+    position:relative;
+    transform: translate(0,2px);
+    width:400px ;
+    margin: 20px 0px 20px 445px ; /*adds space between the line and rest of the code*/
+    border: none;
+    border-top: 0.5vh solid goldenrod;
+    
+}
+body {
+    font-family: poppins, arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url("/Submission Form/fiu-library1.jpg");
+    background-position: 1%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-bottom: 3%;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="email"] {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    margin-top:10px;
+    border:none;
+    border-radius: 1000px;
+    padding: .50em 3em;
+    background-color: #001047;
+    color:white;
+    font:inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+button:hover {
+    background-color: rgb(36, 67, 180);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+}
