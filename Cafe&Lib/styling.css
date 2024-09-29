@@ -206,3 +206,57 @@ section .container > *{
 
     
 }
+
+
+
+.place-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.place-image img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.place-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.place-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.place-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.place-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.place-address,
+.place-distance,
+.place-rating {
+    flex: 1;
+    text-align: center;
+}
