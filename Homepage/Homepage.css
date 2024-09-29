@@ -5,6 +5,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    overflow-y:scroll;
+}
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -89,7 +92,7 @@ nav .container{
     position: relative;
     width: 1.2rem; 
     height: 3px;
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 2px;
 }
 
@@ -99,7 +102,7 @@ nav .container{
     width: 1.55rem;
     height: 3px;
     right: 0;
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 2px;
 }
 
@@ -120,10 +123,9 @@ nav .container{
     text-align: center;
     font-size: 5rem;
     font-weight: 600;
-    color: rgb(255, 60, 0);
+    color: rgb(255, 255, 255);
+    top: 300px;
 }
-
-
 
 section{
     width: 100%;
@@ -194,7 +196,7 @@ section .container > *{
     }
 }
 
-@media(max-width: 600px){
+    @media(max-width: 600px){
     .big-title{
         font-size: 3rem
     }
@@ -206,6 +208,7 @@ section .container > *{
     .title{
         font-size: 1.2rem;
     }
+     
+        
 
-    
 }
